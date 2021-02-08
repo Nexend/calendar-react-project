@@ -1,27 +1,36 @@
 .event {
-    position: absolute;
-    width: 80%;
-    background-color: cornflowerblue;
-    z-index: 1;
-    border-radius: 8px;
-    padding: 8px;
-    color: #fff;
-  
-    &__title {
-        width: 100%;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        margin-bottom: 8px;
-    }
+  position: absolute;
+  width: 80%;
+  background-color: cornflowerblue;
+  z-index: 1;
+  border-radius: 8px;
+  padding: 8px;
+  color: #fff;
 
-    &:hover {
-      font-weight: bold;
-      background-color: red;
-    }
+  &__title {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 8px;
   }
-  
-  .delete-event-btn {
-    cursor: pointer;
-    border: none;
+
+  &:hover {
+    font-weight: bold;
+    background-color: red;
   }
+}
+
+.delete-event-btn {
+  position: relative;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  padding: 10px 30px;
+  left: 115px;
+  top: 70px;
+  z-index: 1;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
