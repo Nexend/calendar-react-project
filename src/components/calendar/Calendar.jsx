@@ -16,7 +16,6 @@ import "./calendar.scss";
 
 const Calendar = ({ weekDates, togglePopup, isOpen }) => {
   const [events, setEvents] = useState([]);
-  console.log(events);
 
   const fetchData = () => {
     fetchEventsList().then((eventsList) => {

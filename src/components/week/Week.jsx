@@ -1,6 +1,7 @@
 import React from "react";
 import Day from "../day/Day";
 import PropTypes from "prop-types";
+import moment from "moment";
 
 import "./week.scss";
 
@@ -16,7 +17,11 @@ const Week = ({ weekDates, events, deleteEvent }) => {
         const dayEvents = events.filter(
           (event) => event.dateFrom > dayStart && event.dateTo < dayEnd
         );
-        const isCurrentDay = dayStart.getDate() === new Date().getDate();
+
+        const isCurrentDay =
+          moment(dayStart).format("MMMM DD YYYY") ===
+          moment(new Date()).format("MMMM DD YYYY");
+
         return (
           <Day
             key={dayStart.getDate()}
